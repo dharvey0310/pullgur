@@ -1,0 +1,29 @@
+{
+  "name": "pullgur",
+  "version": "1.0.0",
+  "description": "Javascript CLI tool to save images from the imgur API to your local system",
+  "main": "./dist/index.js",
+  "repository": "empty",
+  "author": "David Harvey",
+  "license": "MIT",
+  "scripts": {
+    "build": "babel src -d dist"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.18.0",
+    "babel-preset-es2015": "^6.18.0",
+    "babel-preset-es2016": "^6.16.0",
+    "eslint": "^3.12.2",
+    "eslint-config-airbnb": "^13.0.0",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-jsx-a11y": "^3.0.2",
+    "eslint-plugin-react": "^6.8.0"
+  },
+  "dependencies": {
+    "es6-promise": "^4.0.5",
+    "isomorphic-fetch": "^2.2.1"
+  },
+  "bin": {
+    "pullgur": "./dist/index.js"
+  }
+}
