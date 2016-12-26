@@ -1,6 +1,6 @@
 {
   "name": "pullgur",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Javascript CLI tool to save images from the imgur API to your local system",
   "main": "./dist/index.js",
   "repository": "empty",
