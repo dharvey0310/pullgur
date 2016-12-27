@@ -3,8 +3,16 @@
 import fs from 'fs'
 import http from 'http'
 
+const checkPathExists = (path) => {
+    if (!fs.existsSync(path)) {
+        fs.mkdirSync(path)
+    }
+}
+
 export const saveImages = (images, path) => {
     let defaultPath = __dirname + '\\..\\images\\'
+    let iterations = 0
+    path ? checkPathExists(path) : checkPathExists(defaultPath)
     images.map(i => {
         let imageData
         let nameArr = i.link.split('/')
@@ -18,10 +26,13 @@ export const saveImages = (images, path) => {
             })
             request.end()
         }
+        iterations ++
     })
-    if (path) {
-        console.log('Images saved to ' + path)
-    } else {
-        console.log('Images saved to ' + defaultPath.replace('\\dist\\..\\', '\\'))
+    if (iterations === images.length) {
+        if (path) {
+            return path
+        } else {
+            return defaultPath.replace('\\dist\\..\\', '\\')
+        }
     }
 }

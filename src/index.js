@@ -21,6 +21,7 @@ if (args.length > 0) {
     if (gallery) {
         fetchImageURLS(gallery, pageNo)
         .then(response => saveImages(response, path))
+        .then(response => console.log('Images saved to ' + response))
     } else if (help) {
         displayHelp()
     } else {

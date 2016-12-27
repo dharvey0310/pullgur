@@ -3,7 +3,10 @@
   "version": "1.0.1",
   "description": "Javascript CLI tool to save images from the imgur API to your local system",
   "main": "./dist/index.js",
-  "repository": "empty",
+  "repository": {
+      "type": "git",
+      "url": "https://github.com/dharvey0310/pullgur.git"
+    },
   "author": "David Harvey",
   "license": "MIT",
   "scripts": {
@@ -25,5 +28,6 @@
   },
   "bin": {
     "pullgur": "./dist/index.js"
-  }
+  },
+  "keywords": ["cli", "imgur", "images", "hard drive", "api"]
 }
